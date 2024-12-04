@@ -5,6 +5,17 @@
     "ghcr.io/devcontainers/features/docker-in-docker:2": {},
     "ghcr.io/devcontainers/features/python:1": {},
     "ghcr.io/devcontainers/features/java:1": {}
-  }
+  },
+  "dockerFile": "./.devcontainer/Dockerfile",
+    "postCreateCommand": "pip install -r requirements.txt && ./setup/zookeeper-kafka-setup.sh",
+    "extensions": [
+        "ms-python.python",
+        "redhat.vscode-yaml",
+        "ms-azuretools.vscode-docker"
+    ],
+    "settings": {
+        "python.defaultInterpreterPath": "/usr/bin/python3",
+        "terminal.integrated.defaultProfile.linux": "bash"
+    }
 }
   
