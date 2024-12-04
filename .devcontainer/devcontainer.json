@@ -1,0 +1,19 @@
+{
+  "name": "Kafka Training environment",
+  "image": "mcr.microsoft.com/devcontainers/universal:ubuntu",
+  "features": {
+    "docker-in-docker": "latest"
+  },
+  "postCreateCommand": "pip install kafka-python confluent-kafka",
+  "customizations": {
+    "vscode": {
+    "extensions": [
+    "ms-python.python",
+    "vscjava.vscode-java-pack",
+    "ms-azuretools.vscode-docker"
+    ]
+    }
+  },
+  "forwardPorts": [9092,2181],
+  "mounts": ["source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"]
+}
