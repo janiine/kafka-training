@@ -2,7 +2,7 @@
   "name": "Kafka Training environment",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "features": {
-    "docker-in-docker": "latest"
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
   },
   "postCreateCommand": "pip install kafka-python confluent-kafka",
   "customizations": {
